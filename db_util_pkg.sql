@@ -536,7 +536,7 @@ IS
            --
            ,CASE WHEN utp.partition_name IS NULL
                  THEN 
-                      'ALTER TABLE ' || ut.table_name || ' MOVE '|| ut.table_name
+                      'ALTER TABLE ' || ut.table_name || ' MOVE '
                  WHEN utsp.subpartition_name IS NULL 
                  THEN 
                       'ALTER TABLE ' || ut.table_name || ' MOVE PARTITION '|| utp.partition_name
