@@ -35,7 +35,7 @@ PROCEDURE rebuildIndexPrc( pTableName         IN VARCHAR2
                           ,pInvalidOnly       IN VARCHAR2 DEFAULT 'Y'
                           ,pRebuildOption     IN VARCHAR2 DEFAULT 'PARALLEL(DEGREE 32) NOLOGGING'
                           ,pPostRebuildParams IN VARCHAR2 DEFAULT 'CURRENT'
-                          ,pOnline            IN VARCHAR2 DEFAULT 'Y'
+                          ,pOnline            IN VARCHAR2 DEFAULT 'N'
                           ,pTableSpace        IN VARCHAR2 DEFAULT NULL
                           ,pPartitionName     IN VARCHAR2 DEFAULT NULL
                           ,pSubPartitionName  IN VARCHAR2 DEFAULT NULL
@@ -298,7 +298,7 @@ PROCEDURE rebuildIndexPrc( pTableName         IN VARCHAR2
                           ,pInvalidOnly       IN VARCHAR2 DEFAULT 'Y'
                           ,pRebuildOption     IN VARCHAR2 DEFAULT 'PARALLEL(DEGREE 32) NOLOGGING'
                           ,pPostRebuildParams IN VARCHAR2 DEFAULT 'CURRENT'
-                          ,pOnline            IN VARCHAR2 DEFAULT 'Y'
+                          ,pOnline            IN VARCHAR2 DEFAULT 'N'
                           ,pTableSpace        IN VARCHAR2 DEFAULT NULL
                           ,pPartitionName     IN VARCHAR2 DEFAULT NULL
                           ,pSubPartitionName  IN VARCHAR2 DEFAULT NULL
@@ -690,4 +690,7 @@ THEN
 END moveTablePrc;
 
 END db_util_pkg;
+/
+
+GRANT EXECUTE on db_util_pkg TO PUBLIC
 /
